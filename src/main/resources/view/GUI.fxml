@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <TabPane prefHeight="568.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mealy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="540.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Dos entradas">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="535.0">
+                                       <children>
+                                          <TableView fx:id="tab1MealyBin" prefHeight="288.0" prefWidth="400.0">
+                                            <columns>
+                                              <TableColumn fx:id="estadoMealyDos1" prefWidth="100.0" text="Estado" />
+                                              <TableColumn fx:id="ent1MealyDos1" prefWidth="150.0" text="Entrada 1">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt1MealyDos1" prefWidth="75.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal1MealyDos1" prefWidth="75.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent2MealyDos1" prefWidth="150.0" text="Entrada 2">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt2MealyDos1" prefWidth="75.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal2MealyDos1" prefWidth="75.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="tab2MealyBin" layoutX="404.0" prefHeight="288.0" prefWidth="400.0">
+                                             <columns>
+                                                <TableColumn fx:id="estadoMealyBin2" prefWidth="100.0" text="Estado" />
+                                                <TableColumn fx:id="ent1MealyDos2" prefWidth="150.0" text="Entrada 1">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt1MealyDos2" prefWidth="75.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal1MealyDos2" prefWidth="75.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent2MealyDos2" prefWidth="150.0" text="Entrada 2">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt2MealyDos2" prefWidth="75.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal2MealyDos2" prefWidth="75.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                          </TableView>
+                                          <Label alignment="CENTER" layoutX="135.0" layoutY="296.0" prefHeight="26.0" prefWidth="154.0" text="Autómata inicial">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="464.0" layoutY="296.0" prefHeight="27.0" prefWidth="280.0" text="Autómata mínimo equivalente">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="400.5" orientation="VERTICAL" prefHeight="334.0" prefWidth="0.0" />
+                                          <Separator layoutX="-2.0" layoutY="333.0" prefHeight="1.0" prefWidth="804.0" />
+                                          <TextField fx:id="estMealyDosTxt" layoutX="28.0" layoutY="436.0" />
+                                          <Label layoutX="346.0" layoutY="347.0" text="Agregar Estados">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="84.0" layoutY="417.0" text="Estado" />
+                                          <TextField fx:id="est1MealyDosTxt" layoutX="222.0" layoutY="413.0" />
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="386.0" prefHeight="19.0" prefWidth="182.0" text="Estado - Entrada 1" textAlignment="CENTER" />
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="449.0" prefHeight="19.0" prefWidth="182.0" text="Salida - Entrada 1" textAlignment="CENTER" />
+                                          <TextField fx:id="sal1MealyDosTxt" layoutX="223.0" layoutY="468.0" />
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="386.0" prefHeight="19.0" prefWidth="182.0" text="Estado - Entrada 2" textAlignment="CENTER" />
+                                          <TextField fx:id="est2MealyDosTxt" layoutX="424.0" layoutY="413.0" />
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="449.0" prefHeight="19.0" prefWidth="182.0" text="Salida - Entrada 2" textAlignment="CENTER" />
+                                          <TextField fx:id="sal2MealyDosTxt" layoutX="424.0" layoutY="468.0" />
+                                          <Button fx:id="agregarMealyDos" layoutX="659.0" layoutY="405.0" mnemonicParsing="false" onAction="#addMealyDos" text="Agregar estado" />
+                                          <Button fx:id="calcularMealyDos" layoutX="625.0" layoutY="468.0" mnemonicParsing="false" onAction="#calcMealyDos" text="Calcular mínimo equivalente" />
+                                          <Button fx:id="limpiarMealyDos" layoutX="664.0" layoutY="436.0" mnemonicParsing="false" onAction="#LimpMealyDos" text="Limpiar tablas" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Tres entradas">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab1MealyOt" layoutY="45.0" prefHeight="211.0" prefWidth="600.0">
+                                            <columns>
+                                              <TableColumn fx:id="estadoMealyOt1" prefWidth="60.0" text="Estado" />
+                                              <TableColumn fx:id="ent1MealyOt1" prefWidth="180.0" text="Entrada 1">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt1MealyTr1" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal1MealyTr1" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent2MealyOt1" prefWidth="180.0" text="Entrada 2">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt2MealyTr1" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal2MealyTr1" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent3MealyOt1" prefWidth="180.0" text="Entrada 3">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt3MealyTr1" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal3MealyTr1" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="tab2MealyOt" layoutY="306.0" prefHeight="205.0" prefWidth="600.0">
+                                             <columns>
+                                                <TableColumn fx:id="estadoMealyOt2" prefWidth="60.0" text="Estado" />
+                                                <TableColumn fx:id="ent1MealyOt2" prefWidth="180.0" text="Entrada 1">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt1MealyTr2" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal1MealyTr2" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent2MealyOt2" prefWidth="180.0" text="Entrada 2">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt2MealyTr2" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal2MealyTr2" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                                <TableColumn fx:id="ent3MealyOt2" prefWidth="180.0" text="Entrada 3">
+                                                   <columns>
+                                                      <TableColumn fx:id="colEnt3MealyTr3" prefWidth="90.0" text="Estado" />
+                                                      <TableColumn fx:id="colSal3MealyTr2" prefWidth="90.0" text="Salida" />
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="230.0" layoutY="14.0" text="Autómata inicial">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="171.0" layoutY="270.0" text="Autómata mínimo equivalente">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="597.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="3.0" />
+                                          <TextField fx:id="est1MealyTrTxt" layoutX="625.0" layoutY="117.0" />
+                                          <Label layoutX="651.0" layoutY="100.0" text="Estado - Entrada 1" />
+                                          <Label layoutX="652.0" layoutY="151.0" text="Salida -  Entrada 1" />
+                                          <TextField fx:id="sal1MealyTrTxt" layoutX="626.0" layoutY="166.0" />
+                                          <Label layoutX="652.0" layoutY="202.0" text="Estado - Entrada 2" />
+                                          <TextField fx:id="est2MealyTrTxt" layoutX="626.0" layoutY="219.0" />
+                                          <Label layoutX="654.0" layoutY="256.0" text="Salida - Entrada 2" />
+                                          <TextField fx:id="sal2MealyTrTxt" layoutX="626.0" layoutY="271.0" />
+                                          <Label layoutX="652.0" layoutY="306.0" text="Estado - Entrada 3" />
+                                          <TextField fx:id="est3MealyTrTxt" layoutX="626.0" layoutY="321.0" />
+                                          <TextField fx:id="sal3MealyTrTxt" layoutX="626.0" layoutY="369.0" />
+                                          <Label layoutX="653.0" layoutY="354.0" text="Salida - Entrada 3" />
+                                          <Button fx:id="agregarMealyTr" layoutX="625.0" layoutY="421.0" mnemonicParsing="false" onAction="#addMealyTr" text="Agregar" />
+                                          <Button fx:id="calcularMealyTr" layoutX="711.0" layoutY="421.0" mnemonicParsing="false" onAction="#calcMealyTr" text="Calcular" />
+                                          <Button fx:id="limpiarMealyTr" layoutX="654.0" layoutY="466.0" mnemonicParsing="false" onAction="#limpMealyTr" text="Limpiar Tablas" />
+                                          <Label layoutX="631.0" layoutY="3.0" text="Agregar Estados">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="estMealyTrTxt" layoutX="625.0" layoutY="69.0" />
+                                          <Label layoutX="682.0" layoutY="52.0" text="Estado" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Moore">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="542.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Dos entradas">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab1MooreBin" prefHeight="288.0" prefWidth="400.0">
+                                            <columns>
+                                              <TableColumn fx:id="estadoMooreDos1" prefWidth="100.0" text="Estado" />
+                                              <TableColumn fx:id="colEnt1MooreDos1" prefWidth="100.0" text="Entrada 1" />
+                                              <TableColumn fx:id="colEnt2MooreDos1" prefWidth="100.0" text="Entrada 2" />
+                                              <TableColumn fx:id="colSalMooreDos1" prefWidth="100.0" text="Salida" />
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="tab2MooreBin" layoutX="404.0" prefHeight="288.0" prefWidth="400.0">
+                                             <columns>
+                                                <TableColumn fx:id="estadoMooreDos2" prefWidth="100.0" text="Estado" />
+                                                <TableColumn fx:id="colEnt1MooreDos2" prefWidth="100.0" text="Entrada 1" />
+                                                <TableColumn fx:id="colEnt2MooreDos2" prefWidth="100.0" text="Entrada 2" />
+                                                <TableColumn fx:id="colSalMooreDos2" prefWidth="100.0" text="Salida" />
+                                             </columns>
+                                          </TableView>
+                                          <Separator layoutX="400.5" layoutY="-1.0" orientation="VERTICAL" prefHeight="336.0" prefWidth="0.0" />
+                                          <Label layoutX="130.0" layoutY="298.0" text="Autómata inicial">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="475.0" layoutY="298.0" text="Autómata mínimo equivalente">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="-4.0" layoutY="334.0" prefHeight="0.0" prefWidth="811.0" />
+                                          <TextField fx:id="estMooreDos" layoutX="85.0" layoutY="401.0" />
+                                          <Label layoutX="108.0" layoutY="439.0" prefHeight="17.0" prefWidth="103.0" text="Estado - Entrada 2" />
+                                          <Label layoutX="357.0" layoutY="347.0" text="Agregar estados">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="139.0" layoutY="384.0" prefHeight="17.0" prefWidth="38.0" text="Estado" />
+                                          <TextField fx:id="est2MooreDos" layoutX="85.0" layoutY="454.0" />
+                                          <Label layoutX="331.0" layoutY="382.0" prefHeight="22.0" prefWidth="98.0" text="Estado - Entrada 1" />
+                                          <TextField fx:id="est1MooreDos" layoutX="305.0" layoutY="401.0" />
+                                          <Label alignment="CENTER" layoutX="314.0" layoutY="435.0" prefHeight="22.0" prefWidth="131.0" text="Salida" />
+                                          <TextField fx:id="salMooreDos" layoutX="305.0" layoutY="454.0" />
+                                          <Button fx:id="agregarMooreDos" layoutX="612.0" layoutY="389.0" mnemonicParsing="false" onAction="#addMooreDos" text="Agregar" />
+                                          <Button fx:id="calcularMooreDos" layoutX="559.0" layoutY="454.0" mnemonicParsing="false" onAction="#calcMooreDos" text="Calcular mínimo equivalente" />
+                                          <Button fx:id="limpiarMooreDos" layoutX="597.0" layoutY="422.0" mnemonicParsing="false" onAction="#limpMooreDos" text="Limpiar tablas" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Tres entradas">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab1MooreOt" layoutY="46.0" prefHeight="211.0" prefWidth="485.0">
+                                            <columns>
+                                              <TableColumn fx:id="estadoMooreTr1" prefWidth="97.0" text="Estado" />
+                                              <TableColumn fx:id="col1MooreTr1" prefWidth="97.0" text="Entrada 1" />
+                                                <TableColumn fx:id="col2MooreTr1" prefWidth="97.0" text="Entrada 2" />
+                                                <TableColumn fx:id="col3MooreTr1" prefWidth="97.0" text="Entrada 3" />
+                                                <TableColumn fx:id="colSalMooreTr1" prefWidth="97.0" text="Salida" />
+                                            </columns>
+                                          </TableView>
+                                          <TableView fx:id="tab2MooreOt" layoutY="302.0" prefHeight="211.0" prefWidth="485.0">
+                                             <columns>
+                                                <TableColumn fx:id="estadoMooreTr2" prefWidth="97.0" text="Estado" />
+                                                <TableColumn fx:id="col1MooreTr2" prefWidth="97.0" text="Entrada 1" />
+                                                <TableColumn fx:id="col2MooreTr2" prefWidth="97.0" text="Entrada 2" />
+                                                <TableColumn fx:id="col3MooreTr2" prefWidth="97.0" text="Entrada 3" />
+                                                <TableColumn fx:id="colSalMooreTr2" prefWidth="97.0" text="Salida" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="173.0" layoutY="14.0" text="Autómata inicial">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="113.0" layoutY="268.0" text="Autómata mínimo equivalente">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="482.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="0.0" />
+                                          <Label layoutX="622.0" layoutY="72.0" text="Estado" />
+                                          <TextField fx:id="estMooreTrTxt" layoutX="566.0" layoutY="89.0" />
+                                          <Label layoutX="595.0" layoutY="131.0" text="Estado - Entrada 1" />
+                                          <TextField fx:id="ent1MooreTrTxt" layoutX="566.0" layoutY="148.0" />
+                                          <Label layoutX="595.0" layoutY="193.0" text="Estado - Entrada 2" />
+                                          <TextField fx:id="ent2MooreTrTxt" layoutX="566.0" layoutY="210.0" />
+                                          <Label layoutX="595.0" layoutY="249.0" text="Estado - Entrada 3" />
+                                          <TextField fx:id="ent3MooreTrTxt" layoutX="568.0" layoutY="269.0" />
+                                          <Button fx:id="agregarMooreTr" layoutX="592.0" layoutY="395.0" mnemonicParsing="false" onAction="#addMooreTr" text="Agregar estado" />
+                                          <Button fx:id="calcularMooreTr" layoutX="560.0" layoutY="463.0" mnemonicParsing="false" onAction="#calcMooreTr" text="Calcular mínimo equivalente" />
+                                          <Label layoutX="624.0" layoutY="302.0" text="Salida" />
+                                          <TextField fx:id="SalidaMooreTrTxt" layoutX="566.0" layoutY="319.0" />
+                                          <Label layoutX="570.0" layoutY="28.0" text="Agregar Estados">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="limpiarMooreTr" layoutX="597.0" layoutY="430.0" mnemonicParsing="false" onAction="#limpMooreTr" text="Limpiar Tablas" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

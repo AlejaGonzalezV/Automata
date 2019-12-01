@@ -1,0 +1,13 @@
+Instrucciones
+
+-Para calcular un autómata mínimo equivalente debe ejecutar el archivo Automata.jar
+que se encuentra dentro de la carpeja jar.
+-Una vez ejecutada la aplicación, podrá escoger si calcular un autómata Mealy o
+Moore. Los autómatas deben contener dos o tres entradas máximo. Deben ser conexos y
+no tener entradas vacías
+-Se deben ir agregando uno por uno los estados en los campos indicados, presionando el botón "Agregar" y posteriormente
+presionar el botón "Calcular" si se desea calcular el autómata.
+-Si desea limpiar las listas, basta con dar clic al botón "Limpiar"
+-Una vez calculado el autómata mínimo equivalente, este se mostrará en otra tabla
+
+Alejandra González Vélez
